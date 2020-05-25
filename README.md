@@ -1,4 +1,4 @@
-<p align="left"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+<p align="centre"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -38,7 +38,7 @@ Now i am using Laravel Framework 7.12.0 and Jwt Package "tymon/jwt-auth ^1.0".
 
 3. Install packages using "composer install" command.
 
-4. run Database migration for creating tables in your database, "php artisan migrate".
+4. Run Database migration for creating tables in your database, "php artisan migrate".
 
 5. Generate secret key for your JWT "php artisan jwt:secret" it will create a JWT secret key in your .env file
 
