@@ -1,5 +1,4 @@
-<p align="left"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="200"></p>
-<p align="right"><img src="<?php echo url('/images/image.jpeg') ?>" width="200"></p>
+<p align="left"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -24,4 +23,22 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+## About JWT
+
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+### Let's start.
+
+Now i am using Laravel Framework 7.12.0 and Jwt Package "tymon/jwt-auth ^1.0".
+
+1. Download
+
+2. Replace .env.example to .env file and place your database name and password for your DB Access.
+
+3. Install packages using "composer install" command.
+
+4. run Database migration for creating tables in your database, "php artisan migrate".
+
+5. Generate secret key for your JWT "php artisan jwt:secret" it will create a JWT secret key in your .env file
 
