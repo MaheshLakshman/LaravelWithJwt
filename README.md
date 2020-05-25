@@ -42,3 +42,53 @@ Now i am using Laravel Framework 7.12.0 and Jwt Package "tymon/jwt-auth ^1.0".
 
 5. Generate secret key for your JWT "php artisan jwt:secret" it will create a JWT secret key in your .env file
 
+## Test API
+
+I am using postman for verifying my Api.
+
+## Authenticated Requests
+
+There are a number of ways to send the token via http
+
+1. Passing through Authorization Header
+
+Authorization: Bearer token_string..
+
+ex: 
+   
+   Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3BocC1tYXN0ZXJcL3B1YmxpY1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU5MDM4NTQxMywiZXhwIjoxNTkwMzg5MDEzLCJuYmYiOjE1OTAzODU0MTMsImp0aSI6ImJhZkZNUHVMemV4MjM4d0YiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.DIIyw_ZLR66VrtgbPkyuFU6xCjYPgP2HNE3qWQ0sEgc
+
+
+2. Query string parameter
+
+    http://example.dev/me?token=eyJhbGciOiJIUzI1NiI...
+
+
+ Test Our few Api,
+
+ 1. Register a User
+
+ Method = POST,
+
+ Url = http://localhost/php-master/public/api/register
+
+ Parameter = 
+
+            {
+                "name" : "Mahesh",
+                "email" : "mhesssh@i.com",
+                "password" : "123456789",
+                "password_confirmation" : "123456789"
+            }
+
+Response
+
+        {
+            "success": true,
+            "msg": "Registered Successfully..!"
+        }
+
+2. Login
+
+
+
