@@ -70,7 +70,9 @@ ex:
 
  Method = POST,
 
- Url = http://localhost/php-master/public/api/register
+ Url = http://localhost/laraveljwtapi/public/api/register
+
+ Authorization = No
 
  Parameter = 
 
@@ -89,6 +91,93 @@ Response
         }
 
 2. Login
+
+
+ Method = POST,
+
+ Url = http://localhost/laraveljwtapi/public/api/auth/login
+
+ Authorization = No
+
+ Parameter = 
+
+            {
+	            "email":"mhesssh@i.com",
+	            "password":"123456789"
+            }
+
+Response
+
+            {
+                "success": true,
+                "data": {
+                            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL3BocC1tYXN0ZXJcL3B1YmxpY1wvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU5MDM4NjE4MCwiZXhwIjoxNTkwMzg5NzgwLCJuYmYiOjE1OTAzODYxODAsImp0aSI6InB1UEhkVWI5NmNEekVsdU8iLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.RTLhOhbqeOmmzMFqsgdt3jffoyYRVJuaavWMCLxwKQc",
+                            "token_type": "bearer",
+                            "expires_in": 3600
+                        }
+            }
+
+3. Get Login User
+
+
+ Method = GET,
+
+ Url = http://localhost/laraveljwtapi/public/api/auth/me
+
+ Authorization = Yes (Pass your token)
+
+Response
+
+            {
+                "success": true,
+                "data": {
+                            "id": 1,
+                            "name": "Mahesh",
+                            "email": "mhesssh@i.com",
+                            "email_verified_at": null,
+                            "created_at": "2020-05-25T06:04:44.000000Z",
+                            "updated_at": "2020-05-25T06:04:44.000000Z"
+                       }
+            }
+
+
+3. Logout
+
+
+ Method = POST,
+
+ Url = http://localhost/laraveljwtapi/public/api/auth/logout
+
+ Authorization = Yes (Pass your token)
+
+Response
+
+            {
+                "success": true,
+                "msg": "Successfully logged out"
+            }
+
+4. Refresh Token
+
+Method = POST,
+
+ Url = http://localhost/laraveljwtapi/public/api/auth/refresh
+
+ Authorization = Yes (Pass your token)
+
+Response
+
+            {
+                "success": true,
+                "data": {
+                            "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2xhcmF2ZWxqd3RhcGlcL3B1YmxpY1wvYXBpXC9hdXRoXC9yZWZyZXNoIiwiaWF0IjoxNTkwMzg3MTIyLCJleHAiOjE1OTAzOTA3NTgsIm5iZiI6MTU5MDM4NzE1OCwianRpIjoiRFdVTDFYMmZoWndnZUNWOCIsInN1YiI6MSwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.uQiGAbusUIbQfkgsEPaQBceAZylKywve89DZMQwdi7o",
+                            "token_type": "bearer",
+                            "expires_in": 3600
+                        }
+            }
+
+
+
 
 
 
