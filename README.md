@@ -66,7 +66,7 @@ ex:
 
  Test Our few Api,
 
- 1. Register a User
+ #### 1. Register a User
 
  Method = POST,
 
@@ -90,7 +90,7 @@ Response
             "msg": "Registered Successfully..!"
         }
 
-2. Login
+#### 2. Login
 
 
  Method = POST,
@@ -117,7 +117,7 @@ Response
                         }
             }
 
-3. Get Login User
+#### 3. Get Login User
 
 
  Method = GET,
@@ -141,7 +141,7 @@ Response
             }
 
 
-3. Logout
+#### 4. Logout
 
 
  Method = POST,
@@ -157,7 +157,7 @@ Response
                 "msg": "Successfully logged out"
             }
 
-4. Refresh Token
+#### 5. Refresh Token
 
 Method = POST,
 
